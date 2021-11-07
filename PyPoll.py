@@ -14,6 +14,9 @@ candidateOptions = []
 #Instantiating dict to hold the votes for each candidate
 candidateVotes = {}
 
+winningCandidate = ''
+winningCount = 0
+winningPercentage = 0
 
 #Open the election results and read the file.
 with open(csvFile) as election_data:
@@ -44,7 +47,27 @@ for candidateName in candidateVotes:
     #Calculates the percentage of votes for each candidate
     votePercentage = float(votes) / float(totalVotes) * 100
 
-    print(f'{candidateName}: recieved {votePercentage:.1f}% of the vote.')
+
+    if(votes > winningCount) and (votePercentage > winningPercentage):
+        winningCount = votes
+        winningPercentage = votePercentage
+        winningCandidate = candidateName
+
+    # To do: print out each candidate's name, vote count, and percentage of
+    # votes to the terminal.
+    print(f'{candidateName}: {votePercentage:.1f}% ({votes:,})\n')
+
+    
+winningCandidateSummary = (
+    f'----------------------\n'
+    f'Winner: {winningCandidate}\n'
+    f'Winning Vote Count: {winningCount:,}\n'
+    f'Winning Percentage: {winningPercentage:.1f}%\n'
+    f'-----------------------'
+)
+print(winningCandidateSummary)
+
+
 
 #Opening and writing to output file
 with open(saveFile, 'w') as txt_file:
