@@ -23,6 +23,8 @@ To help the Colorado Board of Elections, I've employed the power of the Python p
 Now that the basic information is out of the way, lets get down to the nitty gritty! Below you can see an image of the data results:
 #### Data Results:
 ![All Results Image](https://github.com/StickySitch/Election_Analysis/blob/main/Analysis/ImgResources/C7CR0Xn.png)
+
+
 Now lets break down the precinct data a little bit!
 
 - **Total votes cast in the congressional election**
