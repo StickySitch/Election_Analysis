@@ -13,10 +13,13 @@ candidateOptions = []
 #Instantiating dict to hold the votes for each candidate
 candidateVotes = {}
 
+
 #Instantiating variables to hold election winner information
 winningCandidate = ''
 winningCount = 0
 winningPercentage = 0
+
+
 
 #Open the election results and read the file.
 with open(csvFile) as election_data:
@@ -33,6 +36,8 @@ with open(csvFile) as election_data:
         #Assigning candidate name to variable
         candidateName = row[2]
 
+
+
         #Adds candidate name if not already in the 'candidateOptions' list
         if candidateName not in candidateOptions:
             candidateOptions.append(candidateName)
@@ -42,6 +47,8 @@ with open(csvFile) as election_data:
 
         #Increases vote count for specific candidate by 1
         candidateVotes[candidateName] +=1
+
+
 
 #Opens 'election_analysis.txt' file output the results to
 with open(saveFile, 'w') as txt_file:
