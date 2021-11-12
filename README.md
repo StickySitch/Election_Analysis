@@ -66,7 +66,7 @@ countyVotes  = {}
 ```
 To begin we instantiate a list to hold the county names from the for loop below.
 
-```
+```python
 # For each row in the CSV file.
 for  row  in  reader:
 	# Adds a vote to the "total_votes" count.
@@ -79,7 +79,7 @@ for  row  in  reader:
 	countyName  =  row[1]
 ```
 Above you can see a snippet of the ```for loop``` that is iterating through the .csv file. The part we want to look at is ```countyName  =  row[1]```. This line of code, grabs the county name associated with the row the iteration is currently on and assigns it to ```countyName```. Below you can see the ```countyName``` variable being used in our ```if statement```:
-```
+```python
 #WE ARE CURRENTLY INSIDE THE FOR LOOP FROM ABOVE
 #Checks if "countyName" not already in "countyList"
 #Adds "countyName" to the list if not already in there.
@@ -102,7 +102,7 @@ After the two steps above, the ```if statement``` is left and a vote is added to
 
 #### County Results Calculations:
 Now that we have our list of counties and the vote count that county accumulated, we can make our calculations.
-```
+```python
 for  countyNames  in  countyVotes:
 	#Retrieves the county vote count.
 	county  =  countyVotes.get(countyNames)
@@ -116,7 +116,7 @@ The first line executed in our for loop is: ```county  =  countyVotes.get(county
 Now that we have the vote count for the county, we can calculate the percentage of votes the county is responsible for. To do this we simply divided the counties vote count with the total votes, then multiplying by 100 to get our percentage value, like so: ```countyVotePerc  =  float(county) /  float(total_votes) *  100```
 #### Finding the County with the most votes:
 Lastly for our counties we want to find the county with the largest turnout. To do this, we can use an ```If statement``` like the snippet below:
-```
+```python
 if (county  >  winningCountyCount) & (countyVotePerc  >  winningCountyTurnout):
 	winningCountyCount  =  county
 	largestCounty  =  countyNames
@@ -129,7 +129,7 @@ This ```if statement``` is checking to see if the county in the current iteratio
 ### Candidate Results Code: 
 Since the code to do calculate the candidate results is essentially identical to county calculations, I will just post of few snippets of importance.
 #### Gets candidate names, and tally's the votes:
-```
+```python
 for  row  in  reader:
 	# Adds a vote to the "total_votes" count.
 	total_votes  =  total_votes  +  1
@@ -155,7 +155,7 @@ for  row  in  reader:
 As you can see, like I said, essentially identical.
 #### Candidate Results Calculations:
 
-```
+```python
 #Iterates through "candidate_votes", prints and calculate candidate results
 
 for  candidate_name  in  candidate_votes:
