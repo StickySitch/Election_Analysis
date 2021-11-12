@@ -59,7 +59,7 @@ This election had three candidates: ```Charles Casper Stockham```, ```Diana DeGe
 - **Winner of the Election**
 	- ```Diana DeGette``` has won by a landslide! With a vote count of ``` 272,892```, Diana has over **triple** the votes of the runner up! Diana accumulated ```73.8%``` of the total votes. 
 ### County Results Code: 
-``` 
+```python
 #Instantiating county list and county votes dictionary.
 countyList  = []
 countyVotes  = {}
