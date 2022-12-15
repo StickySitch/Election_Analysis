@@ -1,6 +1,7 @@
 # Election Audit: Colorado Board of Elections
 ## Overview & Purpose
-To help the Colorado Board of Elections, I've employed the power of the Python programming language to audit their election data. The purpose of this election audit is to gather and calculate the data below. With this data we can easily calculate and display the election winner; Along with other important metrics such as turnout percentage.
+To help the Colorado Board of Elections, I've employed the power of the Python programming language to audit their election data. With this data we can easily calculate and display the election winner; Along with other important metrics such as turnout percentage. The purpose of this election audit is to gather and calculate the data below.
+
 #### Data:
 - Total  votes
 ##### County Data
@@ -96,7 +97,7 @@ countyVotes[countyName] +=  1
 The ```countyName``` of the current row from our ```countyName  =  row[1]``` code above is used as a reference in our if statement. ```if  countyName  not  in  countyList:``` checks the ```countyList  = []``` we instantiated at the start for the ```countyName```. If the name does NOT already exist in the list, two things happen:
 1. First we add the ```countyName``` to our ```countyList  = []``` using the append function like so: ```countyList.append(countyName)```.
 
-2. Since the ```countyName``` wasn't already in our ```countyList  = []```, this would be the first time we are running into the county. Now that be have added the county to the list in the first step, we need to make the counties votes count equal to zero: ```countyVotes[countyName] =  0```. This will assign our ```countyName``` a value of zero and add it to the ```countyVotes``` dictionary.
+2. Since the ```countyName``` wasn't already in our ```countyList  = []```, this would be the first time we are running into the county. Now that we have added the county to the list in the first step, we need to make the counties votes count equal to zero: ```countyVotes[countyName] =  0```. This will assign our ```countyName``` a value of zero and add it to the ```countyVotes``` dictionary.
 
 After the two steps above, the ```if statement``` is left and a vote is added to the counties vote count: ```countyVotes[countyName] +=  1```
 
